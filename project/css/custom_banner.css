@@ -1,0 +1,87 @@
+.home{
+    background:linear-gradient(rgba(0, 0, 0, 0.702), rgba(0,0,0,.7)), url(../images/banner-bg.png) no-repeat;
+    min-height: 70vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.home .content{
+    text-align: center;
+    width: 80rem;
+
+}
+
+.home .content h1 {
+    font-size: 4.0rem;
+    color:var(--white);
+    text-transform: uppercase;
+}
+ 
+ .home .content p{
+    font-size:1.8rem;
+    color:var(--light-white);
+    padding: 1.5rem 0;
+    line-height: 1.5;
+}
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px){
+
+   #menu-btn{
+      display: inline-block;
+   }
+
+   .header .header-2 .flex .navbar{
+      position: absolute;
+      top:99%; left:0; right:0;
+      background-color: var(--white);
+      border-top: var(--border);
+      border-bottom: var(--border);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   .header .header-2 .flex .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .header-2 .flex .navbar a{
+      display: block;
+      font-size: 2.5rem;
+      margin:2rem;
+   }
+
+   .home .content h3{
+      font-size: 3.5rem;
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .heading h3{
+      font-size: 3.5rem;
+   }
+
+   .title{
+      font-size: 3rem;
+   }
+
+}

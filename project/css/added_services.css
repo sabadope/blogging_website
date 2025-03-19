@@ -1,0 +1,253 @@
+
+/* CSS Reset */
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* Global Variables */
+:root{
+    --headingFont: 'Poppins', sans-serif;
+    --paraFont: 'DM Sans', sans-serif;
+    --headingColor: #00133E;
+    --textColor: #333333;
+    --grad1: #C626E2;
+    --grad2: #4279F1;
+    --shadow: 0px 0px 54px -26px rgb(82 82 82 / 50%);
+    --bgColor: linear-gradient(30deg, var(--grad1), var(--grad2) 100%);
+}
+
+/* Global Classes */
+.padding{
+    padding: 120px 8.5%;
+}
+    /* Padding For Other Devices */
+ @media only screen and (max-width: 600px) {
+    .padding{
+         padding: 55px 4%;
+    }
+}
+
+.center{
+    text-align: center;
+}
+
+/* Theme Button Design (we weill ise this button design in the website */
+.glob-btn{
+    background-image: linear-gradient(30deg, var(--grad1), var(--grad2) 100%);
+    padding: 12px 15px;
+    color: white;
+    border-radius: 4px;
+    border-top-right-radius: 4px;
+    font-family: var(--paraFont);
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 17px;
+}
+.glob-btn i{
+    background-color: rgba(146, 180, 255, 0.588);
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    margin-left: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    border-top-right-radius: 0;
+}
+.glob-btn:hover i{
+    animation: ArrowMove 0.4s;
+}
+@keyframes ArrowMove {
+    0%{
+        transform: translateX(20%);
+    }
+    50%{
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+#MenuBtn{
+    display: none;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 30%);
+    width: 40px;
+    height: 40;
+    border: 1px solid var(--textColor);
+    border-radius: 4px;
+    border-top-right-radius: 4px;
+    background: var(--bgColor);
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 39px;
+    cursor: pointer;
+}
+/* Responsive View */
+@media only screen and (max-width: 1030px){
+    #MenuBtn{
+        display: block;
+    }
+    
+
+header nav ul{
+        position: absolute;
+        top: 95px;
+        right: 0;
+        width: 250px;
+        height: 0;
+        overflow: hidden;
+        border: 0px solid var(--textColor);
+        background-color: whitesmoke;
+        border-radius: 4px;
+        border-top-right-radius: 0;
+        box-shadow: 0 5 30px rgba(0, 0, 0, 50%);
+        text-align: center;
+        transition: 0.4s;
+        padding: 0;
+    }
+header nav ul li{
+        display: block;
+        margin: 30px 0;
+        border-radius: 2px;
+    }
+
+    Ul Toggle class
+.open-menu{
+        height: 350px;
+        border: 1px solid var(--textColor);
+    }
+}
+
+
+
+/* <=============================--------------------------------------------------------=============================> */
+
+/* ---- Feature Section START ---- */
+#feature{
+    background: url(img/Untitled_design-removebg-preview.png);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+#feature::after{
+    opacity: 0.2;
+}
+
+/* We will use these classes globaly */
+
+.sub-heading{
+    font-family: var(--headingFont);
+    font-weight: 700;
+    color: var(--grad2);
+    font-size: 20px;
+}
+.heading{
+    font-family: var(--headingFont);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--headingColor);
+    margin: 5px 0;
+}
+.sub-para{
+    color: var(--textColor);
+    font-family: var(--paraFont);
+    font-size: 16px;
+    font-weight: 500;
+}
+/* End Classes */
+#feature .feature-row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    margin-top: 70px;
+}
+
+/* We will use this box design in service section as well */
+.feature-box{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color:white;
+    padding: 40px 20px;
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    z-index: 4;
+}
+.feature-box i{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 27px;
+    color: var(--grad2);
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 20%);
+    margin-top: -70px;
+    z-index: 1;
+    transition: 0.4s;
+}
+.feature-box i::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: var(--bgColor);
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    transition: 0.4s;
+    z-index: -1;
+}
+.feature-box:hover i::after{
+    height: 100%;
+}
+.feature-box:hover i{
+    color:white;
+}
+.feature-box h3{
+    color: var(--headingColor);
+    font-family: var(--headingFont);
+    font-weight: 700;
+    font-size: 22px;
+}
+.feature-box p{
+    color: var(--textColor);
+    font-family: var(--paraFont);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Responsive View */
+@media only screen and (max-width: 990px){
+    #feature .feature-row{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
+}
+@media only screen and (max-width: 990px){
+    #feature .feature-row{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+    }
+} 
+/* ---- Feature Section END ---- */
+
+/* <-----------------------------------------------------------------------------------------> */
+

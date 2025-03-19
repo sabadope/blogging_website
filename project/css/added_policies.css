@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .modal-content {
+    background-color: #fff;
+
+    }
+
+    .tabs {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 850px;
+    height: 560px;
+    padding: 30px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 15px 0 #031006;
+    }
+
+    .tabs .tab-header {
+    float: left;
+    width: 180px;
+    height: 100%;
+    border-right: 1px solid #fff;
+    padding: 50px 0;
+    
+    }
+
+    .tabs .tab-header > div {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    padding-left: 10px;
+    }
+
+    .tabs .tab-header > div:hover,
+    .tabs .tab-header > div.active {
+    color: #ffbe00;
+    }
+
+    .tabs .tab-header div i {
+    display: inline-block;
+    width: 25px;
+    }
+
+    .text-white {
+    color: #fff;
+    height: auto; /* set a fixed height */
+    overflow-y: auto; /* only show vertical scrollbar */
+    overflow-x: hidden; /* hide horizontal scrollbar */
+    max-height: 500px; /* Change this to whatever height you prefer */
+    font-size: 16px;
+    
+    }
+
+    .tab-content {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    }
+
+    .tab-content > div {
+    position: absolute;
+    text-align: center;
+    padding: 40px 20px;
+    top: -200%;
+    transition: all 500ms ease-in-out;
+    }
+
+    .tab-content > div.active {
+    top: 0;
+    }
+
+    .tab-content > div i {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: #ffbe00;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 10%;
+    }
+
+    .tab-content > div h2 {
+    margin-top: 8px;
+    }
+
+    .tab-indicator {
+    position: absolute;
+    width: 5px;
+    height: 50px;
+    background: #ffbe00;
+    left: 197px;
+    top: 80px;
+    transition: all 500ms ease-in-out;
+    }
+
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    }
+
+    .modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    border: none;
+    width: 80%;
+    max-width: 700px;
+    }
+
+    .close {
+    color: #aaa;
+    position: absolute;
+    top: 80px;
+    right: -66px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 4.5rem;
+    }
+
+    .close:hover,
+    .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+    /* Set the width of the scrollbar */
+    ::-webkit-scrollbar {
+    width: 5px;
+    }
+
+    /* Set the style of the scrollbar track */
+    ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    }
+
+    /* Set the style of the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+    }
+
+    /* Set the style of the scrollbar thumb when hovered */
+    ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+    }
